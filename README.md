@@ -7,7 +7,7 @@
 ###### [Stable Version](http://wordpress.org/plugins/so-recommended-reading) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=xx)
 
-The SO Recommended Reading plugin lets you add any number of URLs to articles that you want to recommend to your readers.
+The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post.
 
 ## Description
 
