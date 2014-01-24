@@ -21,7 +21,7 @@ During the [Beijing WordPress Meetup](http://www.meetup.com/wordpressbj/events/1
 
 Because I couldn't come up with such a plugin from the top of my head and because I am planning on releasing a series of extensions for the Meta Box plugin, I thought it would be best to put something together myself.
 
-The titles of the URLs you input are automatically extracted.
+The titles of the URLs you input are automatically extracted and shown on the front end.
 
 The Extension doesn't come with any settings; you can just fill in any number of URLs to articles that you want to recommend to your readers. The meta box is only visible in the Edit Post screen.
 
