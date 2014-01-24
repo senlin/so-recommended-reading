@@ -186,7 +186,7 @@ function so_register_meta_boxes( $meta_boxes )
 			array(
 				'name'  => __( 'Link(s)', 'so-recommended-reading' ),
 				'id'    => "{$prefix}link",
-				'desc'  => __( 'The link of the article you are recommending (must start with http://)', 'so-recommended-reading' ),
+				'desc'  => __( 'The link of the article you are recommending (must start with http:// or https://)', 'so-recommended-reading' ),
 				'type'  => 'url',
 				'size'  => '40',
 				'clone' => true
@@ -218,14 +218,7 @@ function so_recommended_reading_output( $content ) {
 		
 			foreach ( $sorr_links as $sorr_link ) {
 	
-				/*// grab title from URL: http://stackoverflow.com/a/4640613/1381553
-				$url = $sorr_link;
-				//preg_match("/<title>(.+)<\/title>/siU", file_get_contents($url), $matches);
-				// improve preg_match via http://stackoverflow.com/questions/4348912/get-title-of-website-via-link#comment26409558_4349078
-				preg_match("/\<title\>(.*)\<\/title\>/i", file_get_contents($url), $matches);
-				$sorr_title = $matches[1];*/
-
-				// grabbing the title via DOMDocument seems more reliable - http://stackoverflow.com/a/4349042/1381553
+				// grabbing the title via DOMDocument seems more reliable than via regex - http://stackoverflow.com/a/4349042/1381553
 				$doc = new DOMDocument();
 				@$doc->loadHTMLFile( $sorr_link );
 				$xpath = new DOMXPath($doc);
