@@ -8,7 +8,7 @@ Stable tag: 2014.01.20
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post.
+Lets you add links to external articles that you want to recommend to your readers and are placed at the bottom of your Post.
 
 == Description ==
 
