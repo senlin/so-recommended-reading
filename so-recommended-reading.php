@@ -131,11 +131,11 @@ $required_plugin = 'meta-box/meta-box.php';
 // multisite throws the error message by default, because the plugin is installed on the network site, therefore check for multisite
 if ( ! in_array( $required_plugin , $plugins ) && ! is_multisite() ) {
 
-	add_action( 'admin_notices', 'so_no_meta_box_warning' );
+	add_action( 'admin_notices', 'sorr_no_meta_box_warning' );
 
 }
 
-function so_no_meta_box_warning() {
+function sorr_no_meta_box_warning() {
     
     // display the warning message
     echo '<div class="message error"><p>';
@@ -162,14 +162,14 @@ require_once dirname( __FILE__ ) . '/inc/required-plugin.php';
  *
  * @since 2014.01.23
  */
-add_filter( 'rwmb_meta_boxes', 'so_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'sorr_register_meta_boxes' );
 
 /**
  * Register meta box
  *
  * @since 2014.01.23
  */
-function so_register_meta_boxes( $meta_boxes )
+function sorr_register_meta_boxes( $meta_boxes )
 {
 
 	$prefix = 'sorr_';
