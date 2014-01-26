@@ -46,9 +46,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 //Only do this when on the Plugins page.
 if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
-	add_action( 'admin_notices', 'so_check_admin_notices', 0 );
+	add_action( 'admin_notices', 'sorr_check_admin_notices', 0 );
 
-function so_min_wp_version() {
+function sorr_min_wp_version() {
 	global $wp_version;
 	$require_wp = '3.6';
 	$update_url = get_admin_url( null, 'update-core.php' );
@@ -62,9 +62,9 @@ function so_min_wp_version() {
 	return $errors; 
 }
 
-function so_check_admin_notices()
+function sorr_check_admin_notices()
 {
-	$errors = so_min_wp_version();
+	$errors = sorr_min_wp_version();
 
 	if ( empty ( $errors ) )
 		return;
