@@ -1,54 +1,16 @@
+# Copyright (C) 2014 SO Recommended Reading
+# This file is distributed under the same license as the SO Recommended Reading package.
 msgid ""
 msgstr ""
-"Project-Id-Version: SO Recommended Reading\n"
-"POT-Creation-Date: 2014-01-24 09:16+0800\n"
-"PO-Revision-Date: 2014-01-24 09:16+0800\n"
-"Last-Translator: Piet Bos <piet@senlinonline.com>\n"
-"Language-Team: Piet Bos <piet@senlinonline.com>\n"
-"Language: nl\n"
+"Project-Id-Version: SO Recommended Reading 2014.01.23\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/so-recommended-reading\n"
+"POT-Creation-Date: 2014-01-24 05:12:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SearchPath-0: .\n"
-
-#: so-recommended-reading.php:78
-#, php-format
-msgid ""
-"<div class="error"><p>%1$s</p><p><i>%2$s</i> has been deactivated.</p></"
-"div>"
-msgstr ""
-
-#: so-recommended-reading.php:143
-#, php-format
-msgid ""
-"The <strong>SO Recommended Reading plugin</strong> only works if you have "
-"the <a href="%s">Meta Box</a> plugin installed."
-msgstr ""
-
-#: so-recommended-reading.php:179
-msgid "Recommended Reading"
-msgstr ""
-
-#: so-recommended-reading.php:187
-msgid "Link(s)"
-msgstr ""
-
-#: so-recommended-reading.php:189
-msgid ""
-"The link of the article you are recommending (must start with http:// or "
-"https://)"
-msgstr ""
-
-#: so-recommended-reading.php:217
-msgid "Recommended Reading:"
-msgstr ""
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: inc/class-tgm-plugin-activation.php:155
 msgid "Install Required Plugins"
@@ -59,7 +21,6 @@ msgid "Install Plugins"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:157 inc/required-plugin.php:79
-#, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
@@ -68,80 +29,44 @@ msgid "Something went wrong."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:159
-#, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/class-tgm-plugin-activation.php:160
-#, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/class-tgm-plugin-activation.php:161 inc/required-plugin.php:82
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"installed."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/class-tgm-plugin-activation.php:162 inc/required-plugin.php:83
-#, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/class-tgm-plugin-activation.php:163
-#, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/class-tgm-plugin-activation.php:164 inc/required-plugin.php:84
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin activated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins activated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/class-tgm-plugin-activation.php:165
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/class-tgm-plugin-activation.php:166 inc/required-plugin.php:86
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"updated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %s plugins. "
-"Contact the administrator of this site for help on getting the plugins "
-"updated."
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -173,12 +98,9 @@ msgstr ""
 #: inc/class-tgm-plugin-activation.php:172
 #: inc/class-tgm-plugin-activation.php:1538
 msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:173
-#, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
@@ -219,10 +141,7 @@ msgid "Installed But Not Activated"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1275
-#, php-format
-msgid ""
-"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
-"Plugins Menu\">Return to the Plugins Menu</a>"
+msgid "No plugins to install or activate. <a href="%1$s" title="Return to the Plugins Menu">Return to the Plugins Menu</a>"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1291
@@ -254,8 +173,7 @@ msgid "Install package not available."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1824
-#, php-format
-msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgid "Downloading install package from <span class="code">%s</span>&#8230;"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1825
@@ -279,13 +197,10 @@ msgid "Plugin activation failed."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1949
-msgid ""
-"The installation and activation process is starting. This process may take a "
-"while on some hosts, so please be patient."
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1950
-#, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
@@ -304,28 +219,22 @@ msgid "All installations and activations have been completed."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1952
-#, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1956
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1957
-#, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1958
-#, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1959
-#, php-format
 msgid "%1$s installed successfully."
 msgstr ""
 
@@ -334,7 +243,6 @@ msgid "All installations have been completed."
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:1961
-#, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
@@ -359,21 +267,14 @@ msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #: inc/required-plugin.php:81
-#, php-format
 msgid "The SO Recommend Reading plugin requires the following plugin: %1$s."
-msgid_plural ""
-"The SO Recommend Reading plugin requires the following plugins: %1$s."
+msgid_plural "The SO Recommend Reading plugin requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/required-plugin.php:85
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with the SO Recommend Reading plugin: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with the SO Recommend Reading plugin: %1$s."
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with the SO Recommend Reading plugin: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with the SO Recommend Reading plugin: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -386,6 +287,48 @@ msgid "The Meta Box plugin has been successfully activated."
 msgstr ""
 
 #: inc/required-plugin.php:91
-#, php-format
 msgid "The Meta Box plugin has been successfully installed and activated. %s"
+msgstr ""
+
+#: so-recommended-reading.php:78
+msgid "<div class="error"><p>%1$s</p><p><i>%2$s</i> has been deactivated.</p></div>"
+msgstr ""
+
+#: so-recommended-reading.php:143
+msgid "The <strong>SO Recommended Reading plugin</strong> only works if you have the <a href="%s">Meta Box</a> plugin installed."
+msgstr ""
+
+#: so-recommended-reading.php:179
+msgid "Recommended Reading"
+msgstr ""
+
+#: so-recommended-reading.php:187
+msgid "Link(s)"
+msgstr ""
+
+#: so-recommended-reading.php:189
+msgid "The link of the article you are recommending (must start with http:// or https://)"
+msgstr ""
+
+#: so-recommended-reading.php:217
+msgid "Recommended Reading:"
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "SO Recommended Reading"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://so-wp.com/?p=76"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post. The plugin is an Extension for the Meta Box plugin by Rilwis and therefore cannot function without the latter being installed too."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Piet Bos"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://senlinonline.com"
 msgstr ""
