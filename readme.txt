@@ -4,7 +4,7 @@ Donate link: http://so-wp.com/donations
 Tags: recommended reading
 Requires at least: 3.6
 Tested up to: 3.9-alpha
-Stable tag: 2014.01.20
+Stable tag: 2014.01.26
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,10 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 2014.01.26 =
+
+* fix function naming issue when more than one SO meta box extension has been installed
 
 = 2014.01.23 =
 

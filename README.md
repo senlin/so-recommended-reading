@@ -68,6 +68,10 @@ This repo is open to _any_ kind of contributions.
 
 ## Changelog
 
+### 2014.01.26
+
+* fix function naming issue when more than one SO meta box extension has been installed
+
 ### 2014.01.23
 
 * 	first release
