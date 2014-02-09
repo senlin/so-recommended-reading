@@ -4,7 +4,7 @@ Donate link: http://so-wp.com/donations
 Tags: recommended reading
 Requires at least: 3.6
 Tested up to: 3.9-alpha
-Stable tag: 2014.01.26
+Stable tag: 2014.02.09
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,14 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 2014.02.09 =
+
+* improve so_related_posts_output content filter:
+* by changing priority from 1 to 5
+* add conditional is_main_query()
+* unset foreach call
+* escape text/url/title-strings
 
 = 2014.01.26 =
 

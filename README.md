@@ -1,6 +1,6 @@
 # SO Recommended Reading
 
-###### Last updated on 2014.01.23
+###### Last updated on 2014.02.09
 ###### requires at least WordPress 3.6
 ###### tested up to WordPress 3.9-alpha
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -67,6 +67,14 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2014.02.09
+
+* improve so_related_posts_output content filter:
+* by changing priority from 1 to 5
+* add conditional is_main_query()
+* unset foreach call
+* escape text/url/title-strings
 
 ### 2014.01.26
 
