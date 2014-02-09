@@ -202,9 +202,12 @@ function sorr_register_meta_boxes( $meta_boxes )
  * Place the output at the bottom of the_content()
  * The output comes in its own class, so you can customise it with CSS all you want.
  *
+ * Improved by changing priority from 1 to 5, add conditional is_main_query(), unset foreach call and esc text/url/title-strings
+ *
  * @since 2014.01.23
+ * @improved 2014.02.09
  */
-add_filter ( 'the_content', 'so_recommended_reading_output', 1 );
+add_filter ( 'the_content', 'so_recommended_reading_output', 5 );
 
 function so_recommended_reading_output( $content ) {
 
@@ -212,9 +215,10 @@ function so_recommended_reading_output( $content ) {
 
 	if( ! empty( $sorr_links ) ) {
 
-		if ( is_single() ) {
+		// @since 2014.02.09 added is_main_query() to make sure that Recommended Reading links don't show elsewhere
+		if ( is_main_query() && is_single() ) {
 
-			$content .= '<div class="so-recommended-reading"><h4>' . __( 'Recommended Reading:', 'so-recommended-reading' ) . '</h4><ul class="recommended-articles">';
+			$content .= '<div class="so-recommended-reading"><h4>' . esc_attr__( 'Recommended Reading:', 'so-recommended-reading' ) . '</h4><ul class="recommended-articles">';
 		
 			foreach ( $sorr_links as $sorr_link ) {
 	
@@ -224,10 +228,13 @@ function so_recommended_reading_output( $content ) {
 				$xpath = new DOMXPath($doc);
 				$sorr_title = $xpath->query('//title')->item(0)->nodeValue;
 			
-				$content .= '<li><a href="' . $sorr_link . '" title="' . $sorr_title . '">' . $sorr_title . '</a></li>';
+				$content .= '<li><a href="' . esc_url( $sorr_link ) . '" title="' . esc_attr( $sorr_title ) . '">' . esc_attr( $sorr_title ) . '</a></li>';
 
 			}
 					
+			// @since 2014.02.09
+			unset( $sorr_link );
+			
 			$content .= '</ul></div>';
 	
 		}
