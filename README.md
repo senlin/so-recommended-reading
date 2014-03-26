@@ -1,11 +1,11 @@
 # SO Recommended Reading
 
-###### Last updated on 2014.02.09
+###### Last updated on 2014.03.27
 ###### requires at least WordPress 3.6
-###### tested up to WordPress 3.9-alpha
+###### tested up to WordPress 3.9-beta2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-recommended-reading) (via WordPress Plugins Repository)
-###### [Plugin homepage](http://so-wp.com/?p=xx)
+###### [Plugin homepage](http://so-wp.com/?p=76)
 
 The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post.
 
@@ -67,6 +67,10 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2014.03.27
+
+* bug fix (reported by [Rakesh Kumar](http://www.linkedin.com/in/rakeshkumarcn))
 
 ### 2014.02.09
 
