@@ -3,13 +3,13 @@
  * Plugin Name: SO Recommended Reading
  * Plugin URI: http://so-wp.com/?p=76
  * Description:  The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post. The plugin is an Extension for the Meta Box plugin by Rilwis and therefore cannot function without the latter being installed too.
- * Version: 2014.03.27
+ * Version: 2014.07.29
  * Author: Piet Bos
  * Author URI: http://senlinonline.com
  * Text Domain: so-recommended-reading
  * Domain Path: /languages
  *
- * Copywrite 2013 Piet Bos (piet@senlinonline.com)
+ * Copywrite 2014 Piet Bos (piet@senlinonline.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -50,7 +50,7 @@ if ( ! empty ( $GLOBALS['pagenow'] ) && 'plugins.php' === $GLOBALS['pagenow'] )
 
 function sorr_min_wp_version() {
 	global $wp_version;
-	$require_wp = '3.6';
+	$require_wp = '3.8';
 	$update_url = get_admin_url( null, 'update-core.php' );
 
 	$errors = array();
@@ -85,6 +85,7 @@ function sorr_check_admin_notices()
 /**
  *
  * @since 2014.01.23
+ * @modified 2014.04.10 - add Settings page
  */
 class SORR_Load {
 
@@ -92,11 +93,58 @@ class SORR_Load {
 
 		global $sorr;
 
-		/* Set up an empty class for the global $so_pinyinslugs object. */
+		/* Set up an empty class for the global $sorr object. */
 		$sorr = new stdClass;
 
+		/* Set the init. */
+		add_action( 'admin_init', array( &$this, 'init' ), 1 );
+
+		/* Set the constants needed by the plugin. */
+		add_action( 'plugins_loaded', array( &$this, 'constants' ), 2 );
+
 		/* Internationalize the text strings used. */
-		add_action( 'admin_init', array( &$this, 'i18n' ), 1 );
+		add_action( 'plugins_loaded', array( &$this, 'i18n' ), 3 );
+
+		/* Load the functions files. */
+		add_action( 'plugins_loaded', array( &$this, 'includes' ), 4 );
+
+		/* Load the admin files. */
+		add_action( 'plugins_loaded', array( &$this, 'admin' ), 5 );
+
+	}
+
+	/**
+	 * Init plugin options to white list our options
+	 *
+	 * @since 2014.04.10
+	 */
+	function init() {
+		
+		register_setting( 'sorr_plugin_options', 'sorr_options', 'sorr_validate_options' );
+		
+	}
+
+	/**
+	 * Defines constants used by the plugin.
+	 *
+	 * @since 2014.04.10
+	 */
+	function constants() {
+
+		/* Set the version number of the plugin. */
+		define( 'SORR_VERSION', '2014.07.29' );
+
+		/* Set constant path to the plugin directory. */
+		define( 'SORR_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+
+		/* Set constant path to the plugin URL. */
+		define( 'SORR_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+
+		/* Set the constant path to the inc directory. */
+		define( 'SORR_INCLUDES', SORR_DIR . trailingslashit( 'inc' ) );
+
+		/* Set the constant path to the admin directory. */
+		define( 'SORR_ADMIN', SORR_DIR . trailingslashit( 'admin' ) );
 
 	}
 
@@ -111,6 +159,32 @@ class SORR_Load {
 		load_plugin_textdomain( 'so-recommended-reading', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 	}
 
+	/**
+	 * Loads the initial files needed by the plugin.
+	 *
+	 * @since 2014.04.10
+	 */
+	function includes() {
+
+		/* Load the plugin functions file. */
+		require_once( SORR_INCLUDES . 'functions.php' );
+	}
+
+	/**
+	 * Loads the admin functions and files.
+	 *
+	 * @since 2014.04.10
+	 */
+	function admin() {
+
+		/* Only load files if in the WordPress admin. */
+		if ( is_admin() ) {
+
+			/* Load the main admin file. */
+			require_once( SORR_ADMIN . 'settings.php' );
+
+		}
+	}
 }
 
 $sorr_load = new SORR_Load();
@@ -156,91 +230,97 @@ function sorr_no_meta_box_warning() {
 require_once dirname( __FILE__ ) . '/inc/required-plugin.php';
 
 /**
- * The actual SO Recommended Reading plugin files start here
- * For the function so_register_meta_boxes below I have taken the [demo.php file](https://github.com/rilwis/meta-box/blob/master/demo/demo.php) 
- * of the Meta Box plugin and adapted it for the specific purpose of this SO Recommended Reading Plugin.
- *
- * @since 2014.01.23
+ * Register activation/deactivation hooks
+ * @since 2014.04.17
  */
-add_filter( 'rwmb_meta_boxes', 'sorr_register_meta_boxes' );
+register_activation_hook( __FILE__, 'sorr_add_defaults' ); 
+register_uninstall_hook( __FILE__, 'sorr_delete_plugin_options' );
+
+add_action( 'admin_menu', 'sorr_add_options_page' );
+
+function sorr_add_options_page() {
+	// Add the new admin menu and page and save the returned hook suffix
+	$hook = add_options_page( 'SO Recommended Reading Settings', 'SO Recommended Reading', 'manage_options', __FILE__, 'sorr_render_form' );
+	// Use the hook suffix to compose the hook and register an action executed when plugin's options page is loaded
+	add_action( 'admin_print_styles-' . $hook , 'sorr_load_settings_style' );
+}
+
 
 /**
- * Register meta box
- *
- * @since 2014.01.23
+ * Define default option settings
+ * @since 2014.04.17
  */
-function sorr_register_meta_boxes( $meta_boxes )
-{
-
-	$prefix = 'sorr_';
-
-	$meta_boxes[] = array(
-		'id' => 'SO_recommended_reading',
-		'title' => __( 'Recommended Reading', 'so-recommended-reading' ),
-		'pages' => array( 'post' ),
-		'context' => 'normal',
-		'priority' => 'high',
-		'autosave' => true,
-		'fields' => array(
-			// URL
-			array(
-				'name'  => __( 'Link(s)', 'so-recommended-reading' ),
-				'id'    => "{$prefix}link",
-				'desc'  => __( 'The link of the article you are recommending (must start with http:// or https://)', 'so-recommended-reading' ),
-				'type'  => 'url',
-				'size'  => '40',
-				'clone' => true
-			),
-
-		)
-	);
-
-	return $meta_boxes;
+function sorr_add_defaults() {
+	
+	$tmp = get_option( 'sorr_options' );
+	
+	if ( ( $tmp['chk_default_options_db'] == '1' ) || ( ! is_array( $tmp ) ) ) {
+		
+		$arr = array(
+			'sorr_title' => __( 'Recommended Reading', 'so-related-posts' ),
+			'chk_default_options_db' => ''
+		);
+		
+		update_option( 'sorr_options', $arr );
+	}
 }
 
 /**
- * Place the output at the bottom of the_content()
- * The output comes in its own class, so you can customise it with CSS all you want.
- *
- * Improved by changing priority from 1 to 5, add conditional is_main_query(), unset foreach call and escape text/url/title-strings
- *
- * @since 2014.01.23
- * @improved 2014.02.09
+ * Delete options table entries ONLY when plugin deactivated AND deleted 
+ * @since 2014.04.17
  */
+function sorr_delete_plugin_options() {
+	
+	delete_option( 'sorr_options' );
+	
+}
+
+/**
+ * Register and enqueue the settings stylesheet
+ * @since 2014.02.12
+ */
+function sorr_load_settings_style() {
+
+	wp_register_style( 'custom_sorr_settings_css', SORR_URI . 'css/settings.css', false, SORR_VERSION );
+
+	wp_enqueue_style( 'custom_sorr_settings_css' );
+
+}
+
+/**
+ * Set-up Action and Filter Hooks
+ * @since 2014.02.12
+ */
+add_filter( 'plugin_action_links', 'sorr_plugin_action_links', 10, 2 );
+
+add_filter( 'rwmb_meta_boxes', 'so_register_meta_boxes' );
+
 add_filter ( 'the_content', 'so_recommended_reading_output', 5 );
 
-function so_recommended_reading_output( $content ) {
+/**
+ * Sanitize and validate input. Accepts an array, return a sanitized array.
+ * @since 2014.02.12
+ */
+function sorr_validate_options($input) {
+	// strip html from textboxes
+	$input['sorr_title'] =  wp_filter_nohtml_kses( $input['sorr_title'] ); // Sanitize input (strip html tags, and escape characters)
+	return $input;
+}
 
-	$sorr_links = rwmb_meta( 'sorr_link', true );
+/**
+ * Display a Settings link on the main Plugins page
+ * @since 2014.02.12
+ */
+function sorr_plugin_action_links( $links, $file ) {
 
-	if( ! empty( $sorr_links ) ) {
-
-		// @since 2014.02.09 added is_main_query() to make sure that Recommended Reading links don't show elsewhere
-		if ( is_main_query() && is_single() ) {
-
-			$content .= '<div class="so-recommended-reading"><h4>' . esc_attr__( 'Recommended Reading:', 'so-recommended-reading' ) . '</h4><ul class="recommended-articles">';
-		
-			foreach ( $sorr_links as $sorr_link ) {
-	
-				// grabbing the title via DOMDocument seems more reliable than via regex - http://stackoverflow.com/a/4349042/1381553
-				$doc = new DOMDocument();
-				@$doc->loadHTMLFile( $sorr_link );
-				$xpath = new DOMXPath($doc);
-				$sorr_title = $xpath->query('//title')->item(0)->nodeValue;
-			
-				$content .= '<li><a href="' . esc_url( $sorr_link ) . '" title="' . esc_attr( $sorr_title ) . '">' . esc_attr( $sorr_title ) . '</a></li>';
-
-			}
-					
-			// @since 2014.02.09
-			unset( $sorr_link );
-			
-			$content .= '</ul></div>';
-	
-		}
-		
+	if ( $file == plugin_basename( __FILE__ ) ) {
+		$sorr_links = '<a href="' . get_admin_url() . 'options-general.php?page=so-recommended-reading/so-recommended-reading.php">' . __( 'Settings', 'so-recommended-reading' ) . '</a>';
+		// make the 'Settings' link appear first
+		array_unshift( $links, $sorr_links );
 	}
 
-	return $content;
+	return $links;
 }
+
+
 /*** The End ***/

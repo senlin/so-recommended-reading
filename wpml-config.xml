@@ -1,0 +1,7 @@
+<wpml-config>
+    <admin-texts>
+        <key name="sorr_options">
+	        <key name="sorr_title" />
+        </key>
+    </admin-texts>    
+</wpml-config>

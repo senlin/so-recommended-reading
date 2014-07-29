@@ -2,9 +2,9 @@
 Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: recommended reading
-Requires at least: 3.6
-Tested up to: 3.9-beta2
-Stable tag: 2014.03.27
+Requires at least: 3.8
+Tested up to: 4.0-beta-2
+Stable tag: 2014.07.29
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,9 +22,9 @@ During the [Beijing WordPress Meetup](http://www.meetup.com/wordpressbj/events/1
 
 Because I couldn't come up with such a plugin from the top of my head and because I am planning on releasing a series of extensions for the Meta Box plugin, I thought it would be best to put something together myself.
 
-The titles of the URLs you input are automatically extracted and shown on the front end.
+The titles of the URLs you input are automatically extracted and shown on the front end. The meta box is only visible in the Edit Post screen
 
-The Extension doesn't come with any settings; you can just fill in any number of URLs to articles that you want to recommend to your readers. The meta box is only visible in the Edit Post screen.
+Since version 2014.07.29 the plugin has a small settings page where you can change the title of "Recommended Reading" into something that fits better with your site. I have also included the wpml-config.xml file, so if you run a multilingual website with WPML, you can translate this string via the String Translations page of WPML.
 
 I have decided to only support this plugin through [Github](https://github.com/senlin/so-recommended-reading/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -51,10 +51,6 @@ Done!
 
 == Frequently Asked Questions ==
 
-= Where are the Settings? =
-
-You can stop looking, there are no settings. When you go into your Post Edit screen, you will see the Recommended Reading Metabox where you can fill in any number of URLs to articles that you want to recommend to your readers.
-
 = Why is the plugin showing an error message after activation? =
 
 This plugin is an Extension for the [Meta Box plugin](http://www.deluxeblogtips.com/meta-box/). If you don't have that installed, this Extension is useless. If you click on the link that shows with the error message you will go to a new page "Required Plugin" to install the Meta Box plugin.
@@ -72,6 +68,12 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 2014.07.29 =
+
+* add settings page to change the title output on frontend
+* add wpml-config.xml file
+* bump required version up to WP 3.8
 
 = 2014.03.27 =
 
