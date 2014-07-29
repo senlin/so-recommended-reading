@@ -1,8 +1,8 @@
 # SO Recommended Reading
 
-###### Last updated on 2014.03.27
-###### requires at least WordPress 3.6
-###### tested up to WordPress 3.9-beta2
+###### Last updated on 2014.07.29
+###### requires at least WordPress 3.8
+###### tested up to WordPress 4.0-beta-2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-recommended-reading) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=76)
@@ -21,15 +21,11 @@ During the [Beijing WordPress Meetup](http://www.meetup.com/wordpressbj/events/1
 
 Because I couldn't come up with such a plugin from the top of my head and because I am planning on releasing a series of extensions for the Meta Box plugin, I thought it would be best to put something together myself.
 
-The titles of the URLs you input are automatically extracted and shown on the front end.
+The titles of the URLs you input are automatically extracted and shown on the front end. The meta box is only visible in the Edit Post screen
 
-The Extension doesn't come with any settings; you can just fill in any number of URLs to articles that you want to recommend to your readers. The meta box is only visible in the Edit Post screen.
+Since version 2014.07.29 the plugin has a small settings page where you can change the title of "Recommended Reading" into something that fits better with your site. I have also included the wpml-config.xml file, so if you run a multilingual website with WPML, you can translate this string via the String Translations page of WPML.
 
 ## Frequently Asked Questions
-
-### Where are the Settings?
-
-You can stop looking, there are no settings. When you go into your Post Edit screen, you will see the Recommended Reading Metabox where you can fill in any number of URLs to articles that you want to recommend to your readers.
 
 ### Why is the plugin showing an error message after activation?
 
@@ -67,6 +63,12 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2014.07.29
+
+* add settings page to change the title output on frontend
+* add wpml-config.xml file
+* bump required version up to WP 3.8
 
 ### 2014.03.27
 
