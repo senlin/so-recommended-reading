@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: recommended reading
 Requires at least: 3.8
-Tested up to: 4.0-beta-2
-Stable tag: 2014.07.29
+Tested up to: 4.0
+Stable tag: 2014.08.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,10 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 2014.08.15 =
+
+* fix PHP warnings
 
 = 2014.07.29 =
 

@@ -52,9 +52,9 @@ function sorr_register_meta_boxes( $meta_boxes )
  * @since 2014.01.23
  * @improved 2014.02.09
  */
-add_filter ( 'the_content', 'so_recommended_reading_output', 5 );
+add_filter ( 'the_content', 'sorr_output', 5 );
 
-function so_recommended_reading_output( $content ) {
+function sorr_output( $content ) {
 
 	$sorr_links = rwmb_meta( 'sorr_link', true );
 

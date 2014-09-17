@@ -2,7 +2,7 @@
 
 ###### Last updated on 2014.07.29
 ###### requires at least WordPress 3.8
-###### tested up to WordPress 4.0-beta-2
+###### tested up to WordPress 4.0
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-recommended-reading) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=76)
@@ -63,6 +63,10 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2014.08.15
+
+* fix PHP warnings
 
 ### 2014.07.29
 
