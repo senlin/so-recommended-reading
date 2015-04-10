@@ -1,8 +1,8 @@
 # SO Recommended Reading
 
-###### Last updated on 2014.07.29
-###### requires at least WordPress 3.8
-###### tested up to WordPress 4.0
+###### Last updated on 2015.04.09
+###### requires at least WordPress 4.0
+###### tested up to WordPress 4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-recommended-reading) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=76)
@@ -11,7 +11,7 @@ The SO Recommended Reading plugin lets you add links to external articles that y
 
 ## Description
 
-The SO Recommended Reading plugin is an Extension for the fantastic [Meta Box plugin](https://github.com/rilwis/meta-box) by [Rilwis](https://github.com/rilwis/). The purpose of the plugin is to let the user add recommendations to external content. 
+The SO Recommended Reading plugin is an Extension for the fantastic [Meta Box plugin](https://github.com/rilwis/meta-box). The purpose of the plugin is to let the user add recommendations to external content. 
 
 With the plugin installed you will find a Recommended Reading box underneath the Post Editor. On the frontend the Recommended Articles are shown in their own class with an unordered list, right after `the_content()`. The class will use the styling of your theme and you can style it further to your own liking. 
 
@@ -29,7 +29,7 @@ Since version 2014.07.29 the plugin has a small settings page where you can chan
 
 ### Why is the plugin showing an error message after activation?
 
-This plugin is an Extension for the [Meta Box plugin](http://www.deluxeblogtips.com/meta-box/). If you don't have that installed, this Extension is useless. If you click on the link that shows with the error message you will go to a new page "Required Plugin" to install the Meta Box plugin.
+This plugin is an Extension for the [Meta Box plugin](http://metabox.io). If you don't have that installed, this Extension is useless. If you click on the link that shows with the error message you will go to a new page "Required Plugin" to install the Meta Box plugin.
 
 ### I don't like the output on my Single Post, can I change anything?
 
@@ -56,13 +56,16 @@ This repo is open to _any_ kind of contributions.
 
 [Github](https://github.com/senlin) 
 
-[Google+](http://plus.google.com/+PietBos) 
-
 [WordPress](http://profiles.wordpress.org/senlin/) 
 
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2015.04.09
+
+* changed logos
+* new banner image for WP.org Repo by [Nick Diamantidis](https://unsplash.com/nick_diama)
 
 ### 2014.08.15
 

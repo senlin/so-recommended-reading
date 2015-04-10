@@ -2,9 +2,9 @@
 Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: recommended reading
-Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 2014.08.15
+Requires at least: 4.0
+Tested up to: 4.2
+Stable tag: 2015.04.09
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,11 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 2015.04.09 =
+
+* changed logos
+* new banner image for WP.org Repo by [Nick Diamantidis](https://unsplash.com/nick_diama)
 
 = 2014.08.15 =
 
