@@ -1,6 +1,6 @@
 # SO Recommended Reading
 
-###### Last updated on 2015.04.09
+###### Last updated on 2015.04.11
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -61,6 +61,10 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2015.04.11
+
+* fixed title setting output - thanks to [Justin](https://twitter.com/Tinpotgamer) for reporting it
 
 ### 2015.04.09
 

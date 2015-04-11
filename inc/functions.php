@@ -63,7 +63,9 @@ function sorr_output( $content ) {
 		// @since 2014.02.09 added is_main_query() to make sure that Recommended Reading links don't show elsewhere
 		if ( is_main_query() && is_single() ) {
 
-			$content .= '<div class="so-recommended-reading"><h4>' . esc_attr__( 'Recommended Reading:', 'so-recommended-reading' ) . '</h4><ul class="recommended-articles">';
+			$options = get_option( 'sorr_options' );
+			$sorrtitle = $options['sorr_title'];
+			$content .= '<div class="so-recommended-reading"><h4>' . esc_attr__( $sorrtitle ) . '</h4><ul class="recommended-articles">';
 		
 			foreach ( $sorr_links as $sorr_link ) {
 	

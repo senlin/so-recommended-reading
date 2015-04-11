@@ -4,7 +4,7 @@ Donate link: http://so-wp.com/donations
 Tags: recommended reading
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 2015.04.09
+Stable tag: 2015.04.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,10 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 2015.04.11 =
+
+* fixed title setting output - thanks to [Justin](https://twitter.com/Tinpotgamer) for reporting it
 
 = 2015.04.09 =
 
