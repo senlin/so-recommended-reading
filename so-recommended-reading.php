@@ -3,7 +3,7 @@
  * Plugin Name: SO Recommended Reading
  * Plugin URI: http://so-wp.com/?p=76
  * Description:  The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post. The plugin is an Extension for the Meta Box plugin by Rilwis and therefore cannot function without the latter being installed too.
- * Version: 2015.04.11
+ * Version: 2015.04.23
  * Author: Piet Bos
  * Author URI: http://senlinonline.com
  * Text Domain: so-recommended-reading
@@ -119,9 +119,9 @@ class SORR_Load {
 	 * @since 2014.04.10
 	 */
 	function init() {
-		
+
 		register_setting( 'sorr_plugin_options', 'sorr_options', 'sorr_validate_options' );
-		
+
 	}
 
 	/**
@@ -132,7 +132,7 @@ class SORR_Load {
 	function constants() {
 
 		/* Set the version number of the plugin. */
-		define( 'SORR_VERSION', '2015.04.09' );
+		define( 'SORR_VERSION', '2015.04.23' );
 
 		/* Set constant path to the plugin directory. */
 		define( 'SORR_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
@@ -210,16 +210,16 @@ if ( ! in_array( $required_plugin , $plugins ) && ! is_multisite() ) {
 }
 
 function sorr_no_meta_box_warning() {
-    
+
     // display the warning message
     echo '<div class="message error"><p>';
-    
+
     printf( __( 'The <strong>SO Recommended Reading plugin</strong> only works if you have the <a href="%s">Meta Box</a> plugin installed.', 'so-recommended-reading' ), 
 		admin_url( 'plugins.php?page=install-required-plugin' )
 	);
-    
+
     echo '</p></div>';
-    
+
 }
 
 /**
@@ -245,22 +245,21 @@ function sorr_add_options_page() {
 	add_action( 'admin_print_styles-' . $hook , 'sorr_load_settings_style' );
 }
 
-
 /**
  * Define default option settings
  * @since 2014.04.17
  */
 function sorr_add_defaults() {
-	
+
 	$tmp = get_option( 'sorr_options' );
-	
+
 	if ( ( $tmp['chk_default_options_db'] == '1' ) || ( ! is_array( $tmp ) ) ) {
-		
+
 		$arr = array(
-			'sorr_title' => __( 'Recommended Reading', 'so-related-posts' ),
+			'sorr_title' => __( 'Recommended Reading', 'so-recommended-reading' ),
 			'chk_default_options_db' => ''
 		);
-		
+
 		update_option( 'sorr_options', $arr );
 	}
 }
@@ -270,9 +269,9 @@ function sorr_add_defaults() {
  * @since 2014.04.17
  */
 function sorr_delete_plugin_options() {
-	
+
 	delete_option( 'sorr_options' );
-	
+
 }
 
 /**
@@ -321,6 +320,4 @@ function sorr_plugin_action_links( $links, $file ) {
 
 	return $links;
 }
-
-
 /*** The End ***/

@@ -1,6 +1,6 @@
 # SO Recommended Reading
 
-###### Last updated on 2015.04.11
+###### Last updated on 2015.04.23
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.2
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -61,6 +61,10 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 2015.04.23
+
+* update TGM Plugin Activation class to 2.4.1 which fixes reported [XSS vulnerability](http://wptavern.com/xss-vulnerability-what-to-do-if-you-buy-or-sell-items-on-themeforest-and-codecanyon) 
 
 ### 2015.04.11
 
