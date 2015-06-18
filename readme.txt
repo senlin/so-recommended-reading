@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: recommended reading
 Requires at least: 4.0
-Tested up to: 4.2
-Stable tag: 2015.04.23
+Tested up to: 4.2.2
+Stable tag: 2015.06.18
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,10 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 2015.06.18 =
+
+* added new MetaBox feature of sort_clone 
 
 = 2015.04.23 =
 

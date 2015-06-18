@@ -34,7 +34,8 @@ function sorr_register_meta_boxes( $meta_boxes )
 				'desc'  => __( 'The link of the article you are recommending (must start with http:// or https://)', 'so-recommended-reading' ),
 				'type'  => 'url',
 				'size'  => '40',
-				'clone' => true
+				'clone' => true,
+				'sort_clone' => true
 			),
 
 		)
