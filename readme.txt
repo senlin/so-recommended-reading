@@ -4,7 +4,7 @@ Donate link: http://so-wp.com/donations
 Tags: recommended reading
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 2015.06.18
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ Because I couldn't come up with such a plugin from the top of my head and becaus
 
 The titles of the URLs you input are automatically extracted and shown on the front end. The meta box is only visible in the Edit Post screen
 
-Since version 2014.07.29 the plugin has a small settings page where you can change the title of "Recommended Reading" into something that fits better with your site. I have also included the wpml-config.xml file, so if you run a multilingual website with WPML, you can translate this string via the String Translations page of WPML.
+Since v1.2.0 (2014.07.29) the plugin has a small settings page where you can change the title of "Recommended Reading" into something that fits better with your site. I have also included the wpml-config.xml file, so if you run a multilingual website with WPML, you can translate this string via the String Translations page of WPML.
 
 I have decided to only support this plugin through [Github](https://github.com/senlin/so-recommended-reading/issues). Therefore, if you have any questions, need help and/or want to make a feature request, please open an issue over at Github. You can also browse through open and closed issues to find what you are looking for and perhaps even help others.
 
@@ -69,49 +69,64 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 
 == Changelog ==
 
-= 2015.06.18 =
+= 1.3.1 =
 
+* date: 2015.06.19
+* revert to [semantic versioning](http://semver.org/)
+* modify metabox registration replace deprecated `pages` with `post_types`
+
+= 1.3.0 =
+
+* date: 2015.06.18
 * added new MetaBox feature of sort_clone 
 
-= 2015.04.23 =
+= 1.2.4 =
 
+* date: 2015.04.23
 * update TGM Plugin Activation class to 2.4.1 which fixes reported [XSS vulnerability](http://wptavern.com/xss-vulnerability-what-to-do-if-you-buy-or-sell-items-on-themeforest-and-codecanyon) 
 
-= 2015.04.11 =
+= 1.2.3 =
 
+* date: 2015.04.11
 * fixed title setting output - thanks to [Justin](https://twitter.com/Tinpotgamer) for reporting it
 
-= 2015.04.09 =
+= 1.2.2 =
 
+* date: 2015.04.09
 * changed logos
 * new banner image for WP.org Repo by [Nick Diamantidis](https://unsplash.com/nick_diama)
 
-= 2014.08.15 =
+= 1.2.1 =
 
+* date: 2014.08.15
 * fix PHP warnings
 
-= 2014.07.29 =
+= 1.2.0 =
 
+* date: 2014.07.29
 * add settings page to change the title output on frontend
 * add wpml-config.xml file
 * bump required version up to WP 3.8
 
-= 2014.03.27 =
+= 1.1.1 =
 
+* date: 2014.03.27
 * bug fix (reported by [Rakesh Kumar](http://www.linkedin.com/in/rakeshkumarcn))
 
-= 2014.02.09 =
+= 1.1.0 =
 
-* improve so_related_posts_output content filter:
-* by changing priority from 1 to 5
+* date: 2014.02.09
+* change priority from 1 to 5 to improve so_related_posts_output content filter
 * add conditional is_main_query()
 * unset foreach call
-* escape text/url/title-strings
+* security fix: escape text/url/title-strings
 
-= 2014.01.26 =
+= 1.0.1 =
 
+* date: 2014.01.26
 * fix function naming issue when more than one SO meta box extension has been installed
 
-= 2014.01.23 =
+= 1.0.0 =
 
+* date: 2014.01.23
 * first release

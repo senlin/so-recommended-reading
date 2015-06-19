@@ -22,7 +22,7 @@ function sorr_register_meta_boxes( $meta_boxes )
 	$meta_boxes[] = array(
 		'id' => 'SO_recommended_reading',
 		'title' => __( 'Recommended Reading', 'so-recommended-reading' ),
-		'pages' => array( 'post' ),
+		'post_types' => array( 'post' ),
 		'context' => 'normal',
 		'priority' => 'high',
 		'autosave' => true,
