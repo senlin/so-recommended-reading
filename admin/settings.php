@@ -8,7 +8,7 @@ function sorr_render_form() { ?>
 	<div class="wrap">
 		
 		<!-- Display Plugin Header, and Description -->
-		<h2><?php _e( 'SO Recommended Reading Settings', 'so-recommended-reading' ); ?></h2>
+		<h1><?php _e( 'SO Recommended Reading Settings', 'so-recommended-reading' ); ?></h1>
 		
 		<p><?php _e( 'Below you can change the title that shows above the list of Recommended Reading links.', 'so-recommended-reading' ); ?></p>
 			
@@ -126,12 +126,11 @@ printf( __( 'Upgrade now with coupon code: %1$s for %2$s!', 'so-recommended-read
 				</div> <!-- end .top -->
 				
 				<ul>
-					<li><a href="https://senlinonline.com/plus/" target="_blank" title="SO PLUS"><?php _e( 'SO PLUS', 'so-recommended-reading' ); ?></a></li>
 					<li><a href="http://senlinonline.com/" target="_blank" title="Senlin Online"><?php _e( 'Senlin Online', 'so-recommended-reading' ); ?></a></li>
 					<li><a href="http://wpti.ps/" target="_blank" title="WP TIPS"><?php _e( 'WP Tips', 'so-recommended-reading' ); ?></a></li>
-					<li><a href="http://cn.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile"><?php _e( 'LinkedIn', 'so-recommended-reading' ); ?></a></li>
-					<li><a href="http://github.com/senlin" title="on Github"><?php _e( 'Github', 'so-recommended-reading' ); ?></a></li>
-					<li><a href="http://profiles.wordpress.org/senlin/" title="on WordPress.org"><?php _e( 'WordPress.org Profile', 'so-recommended-reading' ); ?></a></li>
+					<li><a href="https://www.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile"><?php _e( 'LinkedIn', 'so-recommended-reading' ); ?></a></li>
+					<li><a href="https://github.com/senlin" title="on Github"><?php _e( 'Github', 'so-recommended-reading' ); ?></a></li>
+					<li><a href="https://profiles.wordpress.org/senlin/" title="on WordPress.org"><?php _e( 'WordPress.org Profile', 'so-recommended-reading' ); ?></a></li>
 				</ul>
 			
 			</div> <!-- end .inside -->
