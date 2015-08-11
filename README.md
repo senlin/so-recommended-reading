@@ -64,6 +64,10 @@ This repo is open to _any_ kind of contributions.
 
 ## Changelog
 
+### 1.3.3 (2015.08.12)
+
+* TWEAK: header settings page; only showed half logo after 1.3.2 update 
+
 ### 1.3.2 (2015.08.05)
 
 * changed header settings page to h1 (https://make.wordpress.org/plugins/2015/08/03/4-3-change-to-plugin-dashboard-pages/)

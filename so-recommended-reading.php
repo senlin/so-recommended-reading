@@ -3,9 +3,9 @@
  * Plugin Name: SO Recommended Reading
  * Plugin URI: http://so-wp.com/?p=76
  * Description:  The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post. The plugin is an Extension for the Meta Box plugin by Rilwis and therefore cannot function without the latter being installed too.
- * Version: 1.3.2
- * Author: Piet Bos
- * Author URI: http://senlinonline.com
+ * Version: 1.3.3
+ * Author: SO WP
+ * Author URI: http://so-wp.com/plugins
  * Text Domain: so-recommended-reading
  * Domain Path: /languages
  *
@@ -132,7 +132,7 @@ class SORR_Load {
 	function constants() {
 
 		/* Set the version number of the plugin. */
-		define( 'SORR_VERSION', '1.3.2' );
+		define( 'SORR_VERSION', '1.3.3' );
 
 		/* Set constant path to the plugin directory. */
 		define( 'SORR_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
