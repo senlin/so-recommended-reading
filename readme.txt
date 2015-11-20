@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: recommended reading
 Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 1.3.3
+Tested up to: 4.4
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,12 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 2. SO Recommended Reading output: you can style it to your liking.
 
 == Changelog ==
+
+= 1.4 (2015.11.20) =
+
+* tested up to WP 4.4
+* removed rollback code (related to the revert to semantic versioning in v1.3.1)
+* removed line breaks from output
 
 = 1.3.3 (2015.08.12) =
 

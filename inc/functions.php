@@ -75,8 +75,9 @@ function sorr_output( $content ) {
 				@$doc->loadHTMLFile( $sorr_link );
 				$xpath = new DOMXPath($doc);
 				$sorr_title = $xpath->query('//title')->item(0)->nodeValue;
-			
-				$content .= '<li><a href="' . esc_url( $sorr_link ) . '" title="' . esc_attr( $sorr_title ) . '">' . esc_attr( $sorr_title ) . '</a></li>';
+				
+				// @since 1.4 use preg_replace to remove line breaks from output
+				$content .= '<li><a href="' . esc_url( $sorr_link ) . '" title="' . esc_attr( preg_replace( '/\r|\n/', '', $sorr_title ) ) . '">' . esc_attr( preg_replace( '/\r|\n/', '', $sorr_title ) ) . '</a></li>';
 
 			}
 					

@@ -2,9 +2,9 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-recommended-reading.svg)](http://wordpress.org/plugins/so-recommended-reading)
 
-###### Last updated on 2015.08.05
+###### Last updated on 2015.11.20
 ###### requires at least WordPress 4.0
-###### tested up to WordPress 4.3
+###### tested up to WordPress 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
 ###### [Stable Version](http://wordpress.org/plugins/so-recommended-reading) (via WordPress Plugins Repository)
 ###### [Plugin homepage](http://so-wp.com/?p=76)
@@ -63,6 +63,12 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 1.4 (2015.11.20)
+
+* tested up to WP 4.4
+* removed rollback code (related to the revert to semantic versioning in v1.3.1) 
+* removed line breaks from output
 
 ### 1.3.3 (2015.08.12)
 
