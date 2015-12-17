@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     display: block;
     min-height: 32px;
-    padding-left: 40px;
+    padding-left: 40px !important;
     padding-top: 7px;
 }
 .discount {

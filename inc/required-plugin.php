@@ -6,14 +6,15 @@
  * It is expected that theme authors would copy and paste this code into their
  * functions.php file, and amend to suit.
  *
+ * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
+ *
  * @package    TGM-Plugin-Activation
  * @subpackage Example
- * @version    2.4.1
- * @author     Thomas Griffin
- * @author     Gary Jones
+ * @version    2.5.2
+ * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
- * @link       https://github.com/thomasgriffin/TGM-Plugin-Activation
+ * @link       https://github.com/TGMPA/TGM-Plugin-Activation
  */
 
 /**
@@ -68,21 +69,21 @@ function sorr_register_required_plugin() {
         'is_automatic' => true,                   // Automatically activate plugins after installation or not.
         'message'      => '',                      // Message to output right before the plugins table.
         'strings'      => array(
-            'page_title'                      => __( 'Install Required Plugin', 'tgmpa' ),
-            'menu_title'                      => __( 'Required Plugin', 'tgmpa' ),
-            'installing'                      => __( 'Installing Plugin: %s', 'tgmpa' ), // %s = plugin name.
-            'oops'                            => __( 'Something went wrong with the plugin API.', 'tgmpa' ),
-            'notice_can_install_required'     => _n_noop( 'The SO Recommended Reading plugin requires the following plugin: %1$s.', 'The SO Recommended Reading plugin requires the following plugins: %1$s.', 'tgmpa' ), // %1$s = plugin name(s).
-            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'tgmpa' ), // %1$s = plugin name(s).
-            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'tgmpa' ), // %1$s = plugin name(s).
-            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'tgmpa' ), // %1$s = plugin name(s).
-            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'tgmpa' ), // %1$s = plugin name(s).
-            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'tgmpa' ), // %1$s = plugin name(s).
-            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'tgmpa' ),
-            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'tgmpa' ),
-            'return'                          => __( 'Return to the Plugins page', 'tgmpa' ),
-            'plugin_activated'                => __( 'The Meta Box plugin has been activated successfully.', 'tgmpa' ),
-            'complete'                        => __( 'The Meta Box plugin has been successfully installed and activated. %s', 'tgmpa' ), // %s = dashboard link.
+            'page_title'                      => __( 'Install Required Plugin', 'so-recommended-reading' ),
+            'menu_title'                      => __( 'Required Plugin', 'so-recommended-reading' ),
+            'installing'                      => __( 'Installing Plugin: %s', 'so-recommended-reading' ), // %s = plugin name.
+            'oops'                            => __( 'Something went wrong with the plugin API.', 'so-recommended-reading' ),
+            'notice_can_install_required'     => _n_noop( 'The SO Recommended Reading plugin requires the following plugin: %1$s.', 'The SO Recommended Reading plugin requires the following plugins: %1$s.', 'so-recommended-reading' ), // %1$s = plugin name(s).
+            'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'so-recommended-reading' ), // %1$s = plugin name(s).
+            'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'so-recommended-reading' ), // %1$s = plugin name(s).
+            'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'so-recommended-reading' ), // %1$s = plugin name(s).
+            'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'so-recommended-reading' ), // %1$s = plugin name(s).
+            'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'so-recommended-reading' ), // %1$s = plugin name(s).
+            'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'so-recommended-reading' ),
+            'activate_link'                   => _n_noop( 'Begin activating plugin', 'Begin activating plugins', 'so-recommended-reading' ),
+            'return'                          => __( 'Return to the Plugins page', 'so-recommended-reading' ),
+            'plugin_activated'                => __( 'The Meta Box plugin has been activated successfully.', 'so-recommended-reading' ),
+            'complete'                        => __( 'The Meta Box plugin has been successfully installed and activated. %s', 'so-recommended-reading' ), // %s = dashboard link.
             'nag_type'                        => 'error' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
         )
     );

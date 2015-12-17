@@ -2,7 +2,7 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-recommended-reading.svg)](http://wordpress.org/plugins/so-recommended-reading)
 
-###### Last updated on 2015.11.20
+###### Last updated on 2015.12.17
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.4
 ###### Author: [Piet Bos](https://github.com/senlin)
@@ -63,6 +63,10 @@ This repo is open to _any_ kind of contributions.
 [Website](http://senlinonline.com)
 
 ## Changelog
+
+### 1.5.0 (2015.12.17)
+
+* update TGM-Plugin-Activation class to 2.5.2
 
 ### 1.4 (2015.11.20)
 
