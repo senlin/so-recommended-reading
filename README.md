@@ -2,6 +2,8 @@
 
 [![plugin version](https://img.shields.io/wordpress/plugin/v/so-recommended-reading.svg)](http://wordpress.org/plugins/so-recommended-reading)
 
+### May 14, 2016: No longer in active development, use at own risk
+
 ###### Last updated on 2015.12.17
 ###### requires at least WordPress 4.0
 ###### tested up to WordPress 4.4
@@ -130,7 +132,7 @@ This repo is open to _any_ kind of contributions.
 
 * fix function naming issue when more than one SO meta box extension has been installed
 
-### 1.0.0 (2014.01.23)
+### 1.0.0 (1.0.0)
 
 * first release
 
