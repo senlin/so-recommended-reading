@@ -1,7 +1,7 @@
 <?php
 /**
  * Render the Plugin options form
- * @since 2014.04.09
+ * @since 1.1.0
  */
 function sorr_render_form() { ?>
 
@@ -36,37 +36,6 @@ function sorr_render_form() { ?>
 						</td>
 					</tr>
 
-					<tr valign="top">
-						<th scope="row">
-							<label for="sorr-options">
-								<?php 
-									/* This can be added once the PLUS version is ready, for now just add a link to SO PLUS
-printf( __( 'Get more options with<br /><a href="%s" title="SO PLUS, Premium WordPress Plugins by Senlin Online">SO Recommended Reading PLUS</a>!', 'so-recommended-reading' ),
-										'https://senlinonline.com/plus/plugin/so-recommended-reading-plus/'
-									);
-*/
-									__( 'Check out:', 'so-recommended-reading' );
-								?>
-							</label>
-						</th>
-
-						<td>
-							<p class="description">
-								<?php 
-									/* This can be added once the PLUS version is ready, for now just add a link to SO PLUS
-printf( __( 'Upgrade now with coupon code: %1$s for %2$s!', 'so-recommended-reading' ),
-										'<span class="discount">SWITCH2PLUS</span>',
-										'<strong>30% discount</strong>'
-									);
-*/
-									printf( __( '<a href="%s" title="SO PLUS, Premium WordPress Plugins by Senlin Online">SO PLUS, Premium WordPress Plugins by Senlin Online</a>!', 'so-recommended-reading' ),
-										'https://senlinonline.com/plus/'
-									);
-								?>
-							</p>
-						</td>
-					</tr>
-						
 					<tr valign="top">
 						<th scope="row">
 							<label for="sorr-db-chk"><?php _e( 'Database Options', 'so-recommended-reading' ); ?></label>

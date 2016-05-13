@@ -3,7 +3,7 @@
  * Plugin Name: SO Recommended Reading
  * Plugin URI: http://so-wp.com/?p=76
  * Description:  The SO Recommended Reading plugin lets you add links to external articles that you want to recommend to your readers and places those at the bottom of your Post. The plugin is an Extension for the Meta Box plugin by Rilwis and therefore cannot function without the latter being installed too.
- * Version: 1.5.0
+ * Version: 1.5.1
  * Author: SO WP
  * Author URI: http://so-wp.com/plugins
  * Text Domain: so-recommended-reading
@@ -32,7 +32,7 @@
  * Prevent direct access to files
  * via http://mikejolley.com/2013/08/keeping-your-shit-secure-whilst-developing-for-wordpress/
  *
- * @since 2014.01.23
+ * @since 1.0.0
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * 
  * adapted from example by Thomas Scholz (@toscho) http://wordpress.stackexchange.com/a/95183/2015, Version: 2013.03.31, Licence: MIT (http://opensource.org/licenses/MIT)
  *
- * @since 2014.01.23
+ * @since 1.0.0
  */
 
 //Only do this when on the Plugins page.
@@ -84,8 +84,8 @@ function sorr_check_admin_notices()
 
 /**
  *
- * @since 2014.01.23
- * @modified 2014.04.10 - add Settings page
+ * @since 1.0.0
+ * @modified 1.2.2 - add Settings page
  */
 class SORR_Load {
 
@@ -97,26 +97,26 @@ class SORR_Load {
 		$sorr = new stdClass;
 
 		/* Set the init. */
-		add_action( 'admin_init', array( &$this, 'init' ), 1 );
+		add_action( 'admin_init', array( $this, 'init' ), 1 );
 
 		/* Set the constants needed by the plugin. */
-		add_action( 'plugins_loaded', array( &$this, 'constants' ), 2 );
+		add_action( 'plugins_loaded', array( $this, 'constants' ), 2 );
 
 		/* Internationalize the text strings used. */
-		add_action( 'plugins_loaded', array( &$this, 'i18n' ), 3 );
+		add_action( 'plugins_loaded', array( $this, 'i18n' ), 3 );
 
 		/* Load the functions files. */
-		add_action( 'plugins_loaded', array( &$this, 'includes' ), 4 );
+		add_action( 'plugins_loaded', array( $this, 'includes' ), 4 );
 
 		/* Load the admin files. */
-		add_action( 'plugins_loaded', array( &$this, 'admin' ), 5 );
+		add_action( 'plugins_loaded', array( $this, 'admin' ), 5 );
 
 	}
 
 	/**
 	 * Init plugin options to white list our options
 	 *
-	 * @since 2014.04.10
+	 * @since 1.2.2
 	 */
 	function init() {
 
@@ -127,12 +127,12 @@ class SORR_Load {
 	/**
 	 * Defines constants used by the plugin.
 	 *
-	 * @since 2014.04.10
+	 * @since 1.2.2
 	 */
 	function constants() {
 
 		/* Set the version number of the plugin. */
-		define( 'SORR_VERSION', '1.3.3' );
+		define( 'SORR_VERSION', '1.5.1' );
 
 		/* Set constant path to the plugin directory. */
 		define( 'SORR_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
@@ -151,7 +151,7 @@ class SORR_Load {
 	/**
 	 * Loads the translation file.
 	 *
-	 * @since 2014.01.23
+	 * @since 1.0.0
 	 */
 	function i18n() {
 
@@ -162,7 +162,7 @@ class SORR_Load {
 	/**
 	 * Loads the initial files needed by the plugin.
 	 *
-	 * @since 2014.04.10
+	 * @since 1.2.2
 	 */
 	function includes() {
 
@@ -173,7 +173,7 @@ class SORR_Load {
 	/**
 	 * Loads the admin functions and files.
 	 *
-	 * @since 2014.04.10
+	 * @since 1.2.2
 	 */
 	function admin() {
 
@@ -195,7 +195,7 @@ $sorr_load = new SORR_Load();
  *
  * modified using http://wpengineer.com/1657/check-if-required-plugin-is-active/ and the _no_wpml_warning function (of WPML)
  *
- * @since 2014.01.23
+ * @since 1.0.0
  */
 
 $plugins = get_option( 'active_plugins' );
@@ -225,13 +225,13 @@ function sorr_no_meta_box_warning() {
 /**
  * Include the TGM Activation Class
  *
- * @since 2014.01.23
+ * @since 1.0.0
  */
 require_once dirname( __FILE__ ) . '/inc/required-plugin.php';
 
 /**
  * Register activation/deactivation hooks
- * @since 2014.04.17
+ * @since 1.2.4
  */
 register_activation_hook( __FILE__, 'sorr_add_defaults' ); 
 register_uninstall_hook( __FILE__, 'sorr_delete_plugin_options' );
@@ -247,7 +247,7 @@ function sorr_add_options_page() {
 
 /**
  * Define default option settings
- * @since 2014.04.17
+ * @since 1.2.4
  */
 function sorr_add_defaults() {
 
@@ -266,7 +266,7 @@ function sorr_add_defaults() {
 
 /**
  * Delete options table entries ONLY when plugin deactivated AND deleted 
- * @since 2014.04.17
+ * @since 1.2.4
  */
 function sorr_delete_plugin_options() {
 
@@ -276,7 +276,7 @@ function sorr_delete_plugin_options() {
 
 /**
  * Register and enqueue the settings stylesheet
- * @since 2014.02.12
+ * @since 1.1.0
  */
 function sorr_load_settings_style() {
 
@@ -288,7 +288,7 @@ function sorr_load_settings_style() {
 
 /**
  * Set-up Action and Filter Hooks
- * @since 2014.02.12
+ * @since 1.1.0
  */
 add_filter( 'plugin_action_links', 'sorr_plugin_action_links', 10, 2 );
 
@@ -298,7 +298,7 @@ add_filter ( 'the_content', 'sorr_output', 5 );
 
 /**
  * Sanitize and validate input. Accepts an array, return a sanitized array.
- * @since 2014.02.12
+ * @since 1.1.0
  */
 function sorr_validate_options($input) {
 	// strip html from textboxes
@@ -308,7 +308,7 @@ function sorr_validate_options($input) {
 
 /**
  * Display a Settings link on the main Plugins page
- * @since 2014.02.12
+ * @since 1.1.0
  */
 function sorr_plugin_action_links( $links, $file ) {
 

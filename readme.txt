@@ -69,6 +69,10 @@ Please open an issue here on [Github](https://github.com/senlin/so-recommended-r
 
 == Changelog ==
 
+= 1.5.1 (2016.01.11) =
+
+* improve codebase
+
 = 1.5.0 (2015.12.17) =
 
 * update TGM-Plugin-Activation class to 2.5.2

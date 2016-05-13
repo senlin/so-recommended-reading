@@ -5,14 +5,14 @@
  * For the function so_register_meta_boxes below I have taken the [demo.php file](https://github.com/rilwis/meta-box/blob/master/demo/demo.php) 
  * of the Meta Box plugin and adapted it for the specific purpose of this SO Recommended Reading Plugin.
  *
- * @since 2014.01.23
+ * @since 1.0.0
  */
 add_filter( 'rwmb_meta_boxes', 'sorr_register_meta_boxes' );
 
 /**
  * Register meta box
  *
- * @since 2014.01.23
+ * @since 1.0.0
  */
 function sorr_register_meta_boxes( $meta_boxes )
 {
@@ -50,8 +50,8 @@ function sorr_register_meta_boxes( $meta_boxes )
  *
  * Improved by changing priority from 1 to 5, add conditional is_main_query(), unset foreach call and escape text/url/title-strings
  *
- * @since 2014.01.23
- * @improved 2014.02.09
+ * @since 1.0.0
+ * @improved 1.1.0
  */
 add_filter ( 'the_content', 'sorr_output', 5 );
 
@@ -61,7 +61,7 @@ function sorr_output( $content ) {
 
 	if( ! empty( $sorr_links ) ) {
 
-		// @since 2014.02.09 added is_main_query() to make sure that Recommended Reading links don't show elsewhere
+		// @since 1.1.0 added is_main_query() to make sure that Recommended Reading links don't show elsewhere
 		if ( is_main_query() && is_single() ) {
 
 			$options = get_option( 'sorr_options' );
@@ -81,7 +81,7 @@ function sorr_output( $content ) {
 
 			}
 					
-			// @since 2014.02.09
+			// @since 1.1.0
 			unset( $sorr_link );
 			
 			$content .= '</ul></div>';

@@ -1,23 +1,17 @@
 /**
  * Settings Page styles
  * 
- * @since 2014.04.09
+ * @since 1.1.0
  */
 .wrap > h1 {
     background-image: url("../images/so-icon.png");
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-size: 32px auto;
     display: block;
     min-height: 32px;
     padding-left: 40px !important;
-    padding-top: 7px;
-}
-.discount {
-    color: #008CBA;
-    font-family: Consolas,Monaco,monospace;
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    padding-top: 2px;
 }
 .rate-this-plugin {
 	color: #0074A2;
